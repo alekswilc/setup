@@ -72,12 +72,12 @@ install_public_and_private_ip_route() {
 cmd=(dialog --output-fd 1 --separate-output --checklist '[ALEKSWILC.dev] Choose the tools to install:' 0 0 0)
 load-dialog () {
     options=(
-            1 'Essentials' on
-            2 'Nodejs' off
-            3 'Wireguard' off
+            1 'Essentials (build tools, dig, curl)' on
+            2 'Nodejs (via nvm)' off
+            3 'Wireguard VPN server' off
             4 'GO' off
             5 'Docker' off
-            6 'Private network IP route' off
+            6 'Route for private & public network (systemd)' off
     )
     choices=$("${cmd[@]}" "${options[@]}")
 }
