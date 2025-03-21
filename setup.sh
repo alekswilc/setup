@@ -69,11 +69,11 @@ install_public_and_private_ip_route() {
     systemctl start delete-route-eth1.service;
 }
 
-cmd=(dialog --output-fd 1 --separate-output --extra-button --checklist '[ALEKSWILC.dev] Choose the tools to install:' 0 0 0)
+cmd=(dialog --output-fd 1 --separate-output --checklist '[ALEKSWILC.dev] Choose the tools to install:' 0 0 0)
 load-dialog () {
     options=(
-            1 'Util' on
-            2 'Nodejs' on
+            1 'Essentials' on
+            2 'Nodejs' off
             3 'Wireguard' off
             4 'GO' off
             5 'Docker' off
